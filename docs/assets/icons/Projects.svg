@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_18919" data-name="Rectangle 18919" width="24" height="24" transform="translate(172 34)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_18919-2" data-name="Rectangle 18919" width="24" height="24" transform="translate(356 34)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_15232" data-name="Mask Group 15232" transform="translate(-172 -34)" clip-path="url(#clip-path)">
+    <g id="Mask_Group_15109" data-name="Mask Group 15109" transform="translate(-184)" clip-path="url(#clip-path-2)">
+      <path id="megaphone_1_" data-name="megaphone (1)" d="M23,16a1,1,0,0,1-.446-.1l-2-1a1,1,0,1,1,.894-1.79l2,1A1,1,0,0,1,23,16ZM21.445,6.9l2-1a1,1,0,1,0-.894-1.79l-2,1a1,1,0,0,0,.894,1.79ZM24,10a1,1,0,0,0-1-1H21a1,1,0,0,0,0,2h2A1,1,0,0,0,24,10Zm-6,9V1a1,1,0,0,0-2,0c0,2.949-2.583,4-5,4H4A4,4,0,0,0,0,9v2a4,4,0,0,0,4,4h7c2.417,0,5,1.051,5,4a1,1,0,0,0,2,0ZM8.185,17H4a6,6,0,0,1-1.382-.167l2.5,5.582A2.671,2.671,0,0,0,7.557,24,2.462,2.462,0,0,0,9.8,20.526Z" transform="translate(356 34.001)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
