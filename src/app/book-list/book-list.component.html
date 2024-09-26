@@ -1,0 +1,48 @@
+<div class="page-layout">
+  <div class="container">
+    <h2 class="title">Book List</h2>
+    <label for="search" class="label">Search :</label>
+    <input class="filter" name="search" type="text" [(ngModel)]='keyword' placeholder="Search books..." />
+    <div infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="20" (scrolled)="onScroll()"
+      [scrollWindow]="false" cdkDropList #todoList="cdkDropList" [cdkDropListData]="Books"
+      [cdkDropListConnectedTo]="[doneList]" class="list" (cdkDropListDropped)="drop($event)">
+      <cdk-virtual-scroll-viewport itemSize="5" class="viewport">
+        @for (item of filterBooks; track item) {
+        <div class="box item" cdkDrag>{{item.title}}</div>
+        }
+      </cdk-virtual-scroll-viewport>
+    </div>
+    @if(isLoading){
+      <div class="loading">Loading...</div>
+    }
+  </div>
+
+  <div class="container">
+    <h2 class="title">Book Selected</h2>
+    <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="selectBook" [cdkDropListConnectedTo]="[todoList]"
+      class="list" (cdkDropListDropped)="drop($event)">
+      <cdk-virtual-scroll-viewport itemSize="5" class="viewport">
+        @for (item of selectBook; track item) {
+        <div class="box item" cdkDrag>{{item.title}}</div>
+        }
+      </cdk-virtual-scroll-viewport>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="title">List preview</h2>
+    <div [ngStyle]="{'background-color': backgroundColor}" class="list preview">
+      <p class="text">Discover new worlds and ideas with our curated selection of suggested reads!</p>
+      <cdk-virtual-scroll-viewport itemSize="5" class="viewport">
+        @for (item of selectBook; track item.title) {
+        <div class="box show-list">{{item.title}}</div>
+        }
+      </cdk-virtual-scroll-viewport>
+    </div>
+    <div class="button-container">
+      <button class="back" (click)="changeback('green')" style="background-color: green;"></button>
+      <button class="back" (click)="changeback('red')" style="background-color: red;"></button>
+      <button class="back" (click)="changeback('purple')" style="background-color: purple;"></button>
+    </div>
+  </div>
+</div>

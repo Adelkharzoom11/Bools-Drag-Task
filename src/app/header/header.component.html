@@ -1,0 +1,20 @@
+<header class="header">
+  <div class="logo">
+    <img src="assets/icons/Logo-UAQ-Charity-Association.svg" alt="Logo" />
+  </div>
+
+  <nav class="nav">
+    <ul [class.active]="isMenuOpen" id="menu-items">
+      <li><a href="#"><img class="icon" src="assets/icons/Projects.svg" alt="Projects" /> Projects</a></li>
+      <li><a href="#"><img class="icon" src="assets/icons/Transaction.svg" alt="Transaction" /> Transaction</a></li>
+      <li><a href="#"><img class="icon" src="assets/icons/News.svg" alt="News" /> News</a></li>
+      <li><a href="#"><img class="icon" src="assets/icons/Beneficiary.svg" alt="Beneficiary" /> Beneficiary</a></li>
+      <li><a href="#"><img class="icon" src="assets/icons/Manage-Users.svg" alt="Manage Users" /> Manage Users</a></li>
+      <li><a href="#"><img class="icon" src="assets/icons/Logout.svg" alt="Logout" /> Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="menu-icon" (click)="toggleMenu()" id="menu-icon">
+    <img src="assets/icons/menu.svg" alt="Menu Icon" />
+  </div>
+</header>

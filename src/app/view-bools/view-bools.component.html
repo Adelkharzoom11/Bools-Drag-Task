@@ -1,0 +1,33 @@
+<div class="page-layout">
+  <app-header></app-header> 
+  <button class="add-btn">+ Add Project</button>
+
+  <div class="project-grid">
+    @for (project of projects; track project.id) {
+      <div class="project-card">
+        <img
+          [src]="project.cover_i ? 'https://covers.openlibrary.org/b/id/' + project.cover_i + '-M.jpg' : 'path/to/default-image.jpg'"
+          alt="Project Image"
+          class="project-image"
+        />
+        <span class="project-status">{{ project.status || 'Current Project' }}</span>
+        <h3 class="project-title">{{ project.title }}</h3>
+        <div class="project-actions">
+          <button class="edit-btn">Edit Project</button>
+          <button class="manage-btn">
+            <img src="assets/icons/Manage-Users.svg" alt="Manage Icon" class="icon"/> Manage
+          </button>
+          <button class="delete-btn">
+            <img src="assets/icons/Delete.svg" alt="Delete Icon" class="icon"/> Delete
+          </button>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+  </div>
+</div>
