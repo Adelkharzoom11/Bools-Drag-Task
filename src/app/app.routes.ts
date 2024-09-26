@@ -4,8 +4,8 @@ import { ViewBoolsComponent } from './view-bools/view-bools.component';
 import { HeaderComponent } from './header/header.component';
 
 export const routes: Routes = [
-  { path: 'BookList', component: BookListComponent, pathMatch: 'full' },
   { path: '', component: BookListComponent, pathMatch: 'full' },
+  { path: 'BookList', component: BookListComponent, pathMatch: 'full' },
   { path: 'viewbooks', component: ViewBoolsComponent, pathMatch: 'full' },
   { path: '**', component: BookListComponent, pathMatch: 'full' },
 ];
